@@ -126,6 +126,7 @@ function removeFromFav(name,i) {
   delete heroes[name];
   localStorage.setItem("list", JSON.stringify(heroes))
   showAlert("removed from favourite")
+  window.location.reload();
 }
 
 // this function is called when we click on add fav button
@@ -146,6 +147,6 @@ function addToFav(name,i) {
   heroes[name] = name;
   localStorage.setItem("list", JSON.stringify(heroes));
   showAlert("added to favourite")
-
+  window.location.reload();
 }
 
